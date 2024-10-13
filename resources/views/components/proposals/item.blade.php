@@ -1,11 +1,12 @@
-@props([
-'proposal',
-'position'
-])
+@props(['proposal', 'position'])
+
 <div class="flex justify-between items-center">
 	<div class="flex items-center space-x-2">
 		<div>
-			<x-proposals.position :$position />
+			<x-proposals.position 
+				:$position 
+				:status="$proposal->position_status"
+			/>
 		</div>
 
 		<div>
